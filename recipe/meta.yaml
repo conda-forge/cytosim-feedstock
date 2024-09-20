@@ -1,5 +1,5 @@
 {% set name = "cytosim" %}
-{% set version = "0.0.18" %}
+{% set version = "0.0.19" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8234cbbd89fb897915abdabbefb80490e8044c92118363c002a1214ebd6fe01b
+  sha256: be8b9d7978d93c1bac0f3df172205d0bf52699b9149519800277cae8fff3b98b
 build:
   skip: true  # [win]
   number: 1
