@@ -1,5 +1,5 @@
 {% set name = "cytosim" %}
-{% set version = "0.0.20" %}
+{% set version = "0.0.21" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 40befa988d61edfdaeed413d278a3fbb336e3e5d8199252f13bae6fc0d9a57f9
+  sha256: d227c173399e0ea92dd951054709dc2ec5bb9e6dd819da0fe536be10eabc8f8b
 build:
   skip: true  # [win]
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
   
 
@@ -42,7 +42,7 @@ requirements:
 
 test:
   imports:
-    - cytosim
+    - cytosim2D
 about:
   home: http://cytosim.org/
   license: GPL-3.0-or-later
