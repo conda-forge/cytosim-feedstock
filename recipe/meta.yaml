@@ -1,18 +1,18 @@
 {% set name = "cytosim" %}
-{% set version = "0.0.21" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d227c173399e0ea92dd951054709dc2ec5bb9e6dd819da0fe536be10eabc8f8b
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 3f0547dee60a61e095a24ff2cd65d07884d8c1e7582043779b2b5aa5c6b27ec2
 build:
   skip: true  # [win]
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
-  
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
 
 requirements:
   build:
@@ -21,7 +21,7 @@ requirements:
     - pybind11                               # [build_platform != target_platform]
     - pip
     - cmake >=3.14
-    - make 
+    - make
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
     - libblas
