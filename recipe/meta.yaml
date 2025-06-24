@@ -1,5 +1,5 @@
 {% set name = "cytosim" %}
-{% set version = "0.0.21" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d227c173399e0ea92dd951054709dc2ec5bb9e6dd819da0fe536be10eabc8f8b
+  sha256: 3f0547dee60a61e095a24ff2cd65d07884d8c1e7582043779b2b5aa5c6b27ec2
 build:
   skip: true  # [win]
   number: 0
@@ -27,6 +27,7 @@ requirements:
     - libblas
     - liblapack
     - pybind11
+    - ncurses
   host:
     - pip
     - setuptools
@@ -34,6 +35,7 @@ requirements:
     - libblas
     - liblapack
     - pybind11
+    - ncurses
   run:
     - python
     - libblas
